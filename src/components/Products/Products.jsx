@@ -4,7 +4,7 @@ const Products = (props) => {
     const { products, addToCart } = props;
     const productItems = products.map(product =>
         (
-            <div className="col-md-4">
+            <div className="col-md-4" key={product.id}>
             <div className="thumbnail text-center">
               <a href="#" onClick={e => addToCart(e, product)}>
                   <img src={`/products/${product.sku}_2.jpg`} alt={product.title} />
